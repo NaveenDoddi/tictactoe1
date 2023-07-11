@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet"  href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsde/livr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tic-toc-toe</title>
+</head>
+<body>
+    <div>
+        <h2 id="heading">Tic-Toc-Toe</h2>
+        <table class="table" onclick="run()">
+            <tr>
+                <td><div class="okk" id="0" onclick="handleClick(this)"></div></td>
+                <td><div class="okk" id="1" onclick="handleClick(this)"></div></td>
+                <td><div class="okk" id="2" onclick="handleClick(this)"></div></td>
+            </tr>
+            <tr class="tr">
+                <td><div class="okk" id="3" onclick="handleClick(this)"></div></td>
+                <td><div class="okk" id="4" onclick="handleClick(this)"></div></td>
+                <td><div class="okk" id="5" onclick="handleClick(this)"></div></td>
+            </tr>
+            <tr class="tr">
+                <td><div class="okk" id="6" onclick="handleClick(this)"></div></td>
+                <td><div class="okk" id="7" onclick="handleClick(this)"></div></td>
+                <td><div class="okk" id="8" onclick="handleClick(this)"></div></td>
+            </tr>
+        </table>
+        <h2 id="result"> </h2>
+    </div>
+    
+</body>
+</html>

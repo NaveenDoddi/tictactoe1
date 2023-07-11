@@ -1,0 +1,10 @@
+.okk{
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    text-decoration: wavy;
+    font-size: xx-large;
+}
