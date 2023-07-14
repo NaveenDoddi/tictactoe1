@@ -57,6 +57,7 @@ function run(){
                 }
                 if(redcount == 3){
                     
+                    
                     for(let y = 0 ; y<3; y++){
                         document.getElementById(arr[i][y]).className = "yes"
                     }
