@@ -23,7 +23,7 @@ function run(){
     count2++
 
     var blackarr = [];
-    setTimeout(() => {
+    // setTimeout(() => {
         
         var count1 = Math.floor(Math.random() * arr.length)
     
@@ -37,7 +37,7 @@ function run(){
             // console.log(redarr)
         }
         
-    }, 300);
+    // }, 300);
 
     for(let i = 0; i < 9; i++){
         var color = document.getElementById(i).style.backgroundColor;
@@ -54,7 +54,8 @@ function run(){
         var redcount = 0;
         for(let j = 0; j < 5; j++){
             for(let x = 0; x < redarr.length; x++){
-
+                // console.log((arr1[i][j]))
+                console.log(("red"+redarr[x]))
                 if(arr1[i][j] == redarr[x]){
                     redcount++;
                 }
@@ -77,11 +78,13 @@ function run(){
 
         var blackcount = 0;
         for(let j = 0; j < 5; j++){
-            for(let x =0; x < blackarr.length; x++){
+            for(let x = 0; x < blackarr.length; x++){
+                console.log(blackarr[x])
                 if(arr[i][j] == blackarr[x]){
                     blackcount++;
                 }
-                if(blackcount == 3){
+                // console.log(count2)
+                if(blackcount === 3){
                     console.log("fdk")
                     for(let y = 0 ; y<3; y++){
                         document.getElementById(arr[i][y]).id = "yes"
@@ -98,7 +101,7 @@ function run(){
             }
         }
     }
-console.log(count2)
+
     if(count2 == 9){
         document.getElementById("result").innerText = "Try Again!!!";
         setTimeout(() => {
