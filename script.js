@@ -5,6 +5,8 @@ var count2 = 0
 
 var redarr = [];
 var arr = [0,1,2,3,4,5,6,7,8]
+var arr1 = [[0,1,2,11,11],[3,4,5,11,11],[6,7,8,11,11],[0,3,6,11,11],[1,4,7,11,11],[2,5,8,11,11],[0,4,8,11,11],[2,4,6,11,11]];
+
 
 function handleClick(clickedElement) {
     
@@ -17,7 +19,6 @@ function handleClick(clickedElement) {
     }
      
 }
-var arr1 = [[0,1,2,11,11],[3,4,5,11,11],[6,7,8,11,11],[0,3,6,11,11],[1,4,7,11,11],[2,5,8,11,11],[0,4,8,11,11],[2,4,6,11,11]];
 
 function run(){
     count2++
@@ -55,15 +56,15 @@ function run(){
         for(let j = 0; j < 5; j++){
             for(let x = 0; x < redarr.length; x++){
                 // console.log((arr1[i][j]))
-                console.log(("red"+redarr[x]))
+                // console.log(("red"+redarr[x]))
                 if(arr1[i][j] == redarr[x]){
                     redcount++;
                 }
                 if(redcount == 3){
                     console.log("yes")
-                    for(let y = 0 ; y<3; y++){
-                        document.getElementById(arr[i][y]).className = "yes"
-                    }
+                    // for(let y = 0 ; y<3; y++){
+                    //     document.getElementById(arr[i][y]).className = "yes"
+                    // }
                     
                     document.getElementById("result").innerText = "Red-Winner";
                     document.getElementById("result").style.color = "red"
@@ -79,16 +80,20 @@ function run(){
         var blackcount = 0;
         for(let j = 0; j < 5; j++){
             for(let x = 0; x < blackarr.length; x++){
-                console.log(blackarr[x])
-                if(arr[i][j] == blackarr[x]){
+                // console.log(arr1[i][j])
+                
+                if(arr1[i][j] == blackarr[x]){
+                    console.log(blackarr[x] == arr1[i][j])
                     blackcount++;
+                    console.log(blackcount)
                 }
                 // console.log(count2)
-                if(blackcount === 3){
+                if(blackcount == 3){
                     console.log("fdk")
-                    for(let y = 0 ; y<3; y++){
-                        document.getElementById(arr[i][y]).id = "yes"
-                    }
+                    
+                    // for(let y = 0 ; y<3; y++){
+                    //     document.getElementById(arr[i][y]).id = "yes"
+                    // }
 
                     document.getElementById("result").innerText = "Black-Winner";
                     document.getElementById("result").style.color = "balck"
@@ -97,7 +102,6 @@ function run(){
                         window.location.reload();
                     }, 3000);
                 }
-                
             }
         }
     }
