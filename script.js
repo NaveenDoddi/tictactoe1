@@ -10,20 +10,14 @@ var arr1 = [[0,1,2,11,11],[3,4,5,11,11],[6,7,8,11,11],[0,3,6,11,11],[1,4,7,11,11
 function handleClick(clickedElement){
     
     person(clickedElement)
-    
+    // count2++
     console.log(count2)
-    if(count2 == 5){
-        document.getElementById("result").innerText = "Try Again!!!";
-        setTimeout(() => {
-            window.location.reload();
-        }, 3000);
-    }
-    count2++
+    
+    
 }
 
-
 function person(clickedElement){
-
+    count2++
     if(clickedElement.style.backgroundColor != "lightblue"){
         clickedElement.innerText = "X"
         clickedElement.style.backgroundColor = "red"
@@ -41,7 +35,6 @@ function person(clickedElement){
         }
         
     }
-    console.log(personarr)
     
     for(let i = 0; i < 8; i++){
         var personcount = 0;
@@ -57,34 +50,38 @@ function person(clickedElement){
                     document.getElementById("result").style.color = "red";
     
                     setTimeout(() => {
-                        window.location.reload();
+                        // window.location.reload();
                     }, 3000);
+                    return 0;
                 }
             } 
         }
     }
-    if(personcount<3){
+    if(count2 == 9 && personcount < 3){
+        closing()
+    }
+    if(personcount < 3){
         AI()
     }
-    
+
 }
 
 function AI(){
+    count2++
+    if(arr.length != 0){
+
+        var count1 = Math.floor(Math.random() * arr.length);
+        if(document.getElementById(arr[count1]).style.backgroundColor != "red"){
     
-    var count1 = Math.floor(Math.random() * arr.length);
-
-    if(document.getElementById(arr[count1]).style.backgroundColor != "red"){
-
-        AIarr.push(arr[count1])
-        document.getElementById(arr[count1]).innerText = "O";
-        document.getElementById(arr[count1]).style.backgroundColor = "lightblue";
+            AIarr.push(arr[count1])
+            document.getElementById(arr[count1]).innerText = "O";
+            document.getElementById(arr[count1]).style.backgroundColor = "lightblue";
+        
+            arr.splice(arr.findIndex((i) => i == arr[count1]),1);
+            count = 0;
     
-        arr.splice(arr.findIndex((i) => i == arr[count1]),1);
-        count = 0;
-
+        } 
     }
-    
-
     for(let i = 0; i < 8; i++){
         var AIcount = 0;
         for(let j = 0; j < 5; j++){
@@ -99,10 +96,15 @@ function AI(){
                     document.getElementById("result").style.color = "lightblue";
 
                     setTimeout(() => {
-                        window.location.reload();
+                        // window.location.reload();
                     }, 3000);
+                    return 0;
                 }
             }
         }
     }
+}
+
+function closing(){
+    document.getElementById("result").innerText = "Try Again!!!";
 }
