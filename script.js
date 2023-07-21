@@ -9,14 +9,18 @@ var arr1 = [[0,1,2,11,11],[3,4,5,11,11],[6,7,8,11,11],[0,3,6,11,11],[1,4,7,11,11
 
 function handleClick(clickedElement){
     
-    person(clickedElement)
+    if(clickedElement.style.backgroundColor != "lightblue" && clickedElement.style.backgroundColor != "red"){
+        person(clickedElement)
+    }
+    
     // count2++
-    console.log(count2)
+    // console.log(count2)
     
     
 }
 
 function person(clickedElement){
+
     count2++
     if(clickedElement.style.backgroundColor != "lightblue"){
         clickedElement.innerText = "X"
@@ -50,7 +54,7 @@ function person(clickedElement){
                     document.getElementById("result").style.color = "red";
     
                     setTimeout(() => {
-                        // window.location.reload();
+                        window.location.reload();
                     }, 3000);
                     return 0;
                 }
@@ -96,7 +100,7 @@ function AI(){
                     document.getElementById("result").style.color = "lightblue";
 
                     setTimeout(() => {
-                        // window.location.reload();
+                        window.location.reload();
                     }, 3000);
                     return 0;
                 }
@@ -107,4 +111,8 @@ function AI(){
 
 function closing(){
     document.getElementById("result").innerText = "Try Again!!!";
+    setTimeout(() => {
+        window.location.reload();
+    }, 3000);
+    return 0;
 }

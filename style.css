@@ -8,3 +8,13 @@
     text-decoration: wavy;
     font-size: xx-large;
 }
+
+#heading,#result{
+    text-align: center;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
