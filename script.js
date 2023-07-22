@@ -65,7 +65,10 @@ function person(clickedElement){
         closing()
     }
     if(personcount < 3){
-        AI()
+        setTimeout(()=>{
+            AI()  
+        },500)
+        
     }
 
 }
