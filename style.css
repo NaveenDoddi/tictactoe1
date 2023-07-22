@@ -1,4 +1,4 @@
-.okk{
+.okk,.dis{
     height: 100px;
     width: 100px;
     border: 2px solid black;
@@ -17,4 +17,13 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
- }
+}
+.dis{
+    height: 50px;
+    width: 55px;
+    font-size: large;
+    border: 2px solid black;
+}
+#human{
+    background-color: red;
+}

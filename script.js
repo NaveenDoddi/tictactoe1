@@ -48,9 +48,9 @@ function person(clickedElement){
                     personcount++;
                 }
                 if(personcount == 3){
-                    console.log("yes")
+                    console.log("person")
                     
-                    document.getElementById("result").innerText = "person-Winner";
+                    document.getElementById("result").innerText = "HUMAN-Winner";
                     document.getElementById("result").style.color = "red";
     
                     setTimeout(() => {
@@ -65,15 +65,29 @@ function person(clickedElement){
         closing()
     }
     if(personcount < 3){
+            document.getElementById("ai").style.backgroundColor = "lightblue"
+            document.getElementById("human").style.backgroundColor = "white"
         setTimeout(()=>{
+            
             AI()  
         },500)
+
+        setTimeout(()=>{
+            document.getElementById("human").style.backgroundColor = "red"
+            document.getElementById("ai").style.backgroundColor = "white" 
+        },1500)
+
+        // document.getElementById("human").style.backgroundColor = "red"
+        // document.getElementById("ai").style.backgroundColor = "white"
         
     }
 
 }
 
 function AI(){
+    
+    
+
     count2++
     if(arr.length != 0){
 
@@ -97,7 +111,7 @@ function AI(){
                     AIcount++;
                 }
                 if(AIcount == 3){
-                    console.log("fdk");
+                    console.log("AI");
                     
                     document.getElementById("result").innerText = "AI-Winner";
                     document.getElementById("result").style.color = "lightblue";
@@ -110,6 +124,7 @@ function AI(){
             }
         }
     }
+    
 }
 
 function closing(){
