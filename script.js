@@ -18,6 +18,7 @@ function handleClick(clickedElement){
 function person(clickedElement){
 
     count2++
+    document.getElementById("PersonSound").play()
     if(clickedElement.style.backgroundColor != "lightblue"){
         clickedElement.innerText = "X"
         clickedElement.style.backgroundColor = "red"
@@ -44,7 +45,8 @@ function person(clickedElement){
                     personcount++;
                 }
                 if(personcount == 3){
-                    console.log("person")
+                    console.log("person");
+                    document.getElementById("EndSound").play()
                     
                     document.getElementById("result").innerText = "HUMAN-Winner";
                     document.getElementById("result").style.color = "red";
@@ -78,7 +80,7 @@ function person(clickedElement){
 }
 
 function AI(){
-
+    document.getElementById("AiSound").play()
     count2++
     if(arr.length != 0){
 
@@ -94,7 +96,7 @@ function AI(){
     
         } 
     }
-    
+
     for(let i = 0; i < 8; i++){
         var AIcount = 0;
         for(let j = 0; j < 5; j++){
@@ -103,7 +105,9 @@ function AI(){
                     AIcount++;
                 }
                 if(AIcount == 3){
+
                     console.log("AI");
+                    document.getElementById("EndSound").play()
                     
                     document.getElementById("result").innerText = "AI-Winner";
                     document.getElementById("result").style.color = "lightblue";
@@ -120,9 +124,11 @@ function AI(){
 }
 
 function closing(){
+    document.getElementById("EndSound").play();
     document.getElementById("result").innerText = "Try Again!!!";
     setTimeout(() => {
         window.location.reload();
     }, 3000);
     return 0;
 }
+
