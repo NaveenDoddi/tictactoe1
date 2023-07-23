@@ -11,11 +11,7 @@ function handleClick(clickedElement){
     
     if(clickedElement.style.backgroundColor != "lightblue" && clickedElement.style.backgroundColor != "red"){
         person(clickedElement)
-    }
-    
-    // count2++
-    // console.log(count2)
-    
+    } 
     
 }
 
@@ -76,17 +72,12 @@ function person(clickedElement){
             document.getElementById("human").style.backgroundColor = "red"
             document.getElementById("ai").style.backgroundColor = "white" 
         },1500)
-
-        // document.getElementById("human").style.backgroundColor = "red"
-        // document.getElementById("ai").style.backgroundColor = "white"
         
     }
 
 }
 
 function AI(){
-    
-    
 
     count2++
     if(arr.length != 0){
@@ -103,6 +94,7 @@ function AI(){
     
         } 
     }
+    
     for(let i = 0; i < 8; i++){
         var AIcount = 0;
         for(let j = 0; j < 5; j++){
