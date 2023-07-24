@@ -48,7 +48,7 @@ function person(clickedElement){
                     console.log("person");
                     document.getElementById("EndSound").play()
                     
-                    document.getElementById("result").innerText = "HUMAN-Winner";
+                    document.getElementById("result").innerText = "You-Win";
                     document.getElementById("result").style.color = "red";
     
                     setTimeout(() => {
@@ -109,7 +109,7 @@ function AI(){
                     console.log("AI");
                     document.getElementById("EndSound").play()
                     
-                    document.getElementById("result").innerText = "AI-Winner";
+                    document.getElementById("result").innerText = "AI-Win";
                     document.getElementById("result").style.color = "lightblue";
 
                     setTimeout(() => {
