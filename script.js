@@ -18,7 +18,7 @@ function handleClick(clickedElement){
 function person(clickedElement){
 
     count2++
-    document.getElementById("PersonSound").play()
+    // document.getElementById("PersonSound").play()
     if(clickedElement.style.backgroundColor != "lightblue"){
         clickedElement.innerText = "X"
         clickedElement.style.backgroundColor = "red"
