@@ -19,6 +19,8 @@ function person(clickedElement){
 
     count2++
     // document.getElementById("PersonSound").play()
+    document.getElementById("AiSound").pause()
+    document.getElementById("AiSound").currentTime = 0;
     if(clickedElement.style.backgroundColor != "lightblue"){
         clickedElement.innerText = "X"
         clickedElement.style.backgroundColor = "red"
@@ -49,7 +51,7 @@ function person(clickedElement){
                     document.getElementById("EndSound").play()
                     
                     document.getElementById("result").innerText = "You-Win";
-                    document.getElementById("result").style.color = "red";
+                    document.getElementById("result").style.backgroundColor = "red";
     
                     setTimeout(() => {
                         window.location.reload();
@@ -80,6 +82,8 @@ function person(clickedElement){
 }
 
 function AI(){
+    document.getElementById("AiSound").pause()
+    document.getElementById("AiSound").currentTime = 0.5;
     document.getElementById("AiSound").play()
     count2++
     if(arr.length != 0){
@@ -110,7 +114,7 @@ function AI(){
                     document.getElementById("EndSound").play()
                     
                     document.getElementById("result").innerText = "AI-Win";
-                    document.getElementById("result").style.color = "lightblue";
+                    document.getElementById("result").style.backgroundColor = "lightblue";
 
                     setTimeout(() => {
                         window.location.reload();

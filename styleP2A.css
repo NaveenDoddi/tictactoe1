@@ -1,0 +1,51 @@
+.okk,.dis{
+    height: 70px;
+    width: 70px;
+    border: 2px solid black;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    text-decoration: wavy;
+    font-size: xx-large;
+}
+
+#heading,#result{
+    text-align: center;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dis{
+    height: 50px;
+    width: 55px;
+    font-size: large;
+    border: 2px solid black;
+    border-radius: 0px;
+    text-align: center;
+}
+#player1, #player2{
+    width: 70px;
+}
+#human{
+    background-color: red;
+}
+.left{
+    border-left: 2px solid black;
+    /* border-bottom: 2px solid black; */
+    border-collapse: collapse;
+}
+#bottom{
+    border-bottom: 2px solid black;
+}
+#result{
+    height: 50px;
+    width: 300px;
+    font-size: xx-large;
+    border: 2px solid black;
+    border-radius: 0px;
+    text-align: center;
+}
