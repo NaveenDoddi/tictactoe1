@@ -131,5 +131,3 @@ function closing(){
     }, 3000);
     return 0;
 }
-
-// jfkasdf
