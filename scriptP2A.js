@@ -55,9 +55,8 @@ function person(clickedElement){
                     document.getElementById("result").innerText = "You-Win";
                     document.getElementById("result").style.backgroundColor = "red";
     
-                    setTimeout(() => {
-                        window.location.reload();
-                    }, 3000);
+                    document.getElementById("restartbtn").style.visibility = "visible"
+
                     return 0;
                 }
             } 
@@ -126,9 +125,8 @@ function AI(){
                     document.getElementById("result").innerText = "AI-Win";
                     document.getElementById("result").style.backgroundColor = "lightblue";
 
-                    setTimeout(() => {
-                        window.location.reload();
-                    }, 3000);
+                    document.getElementById("restartbtn").style.visibility = "visible"
+
                     return 0;
                 }
             }
@@ -304,8 +302,10 @@ function randomgod(){
 function closing(){
     document.getElementById("EndSound").play();
     document.getElementById("result").innerText = "Try Again!!!";
-    setTimeout(() => {
-        window.location.reload();
-    }, 3000);
+    document.getElementById("restartbtn").style.visibility = "visible"
     return 0;
+}
+
+function reload(){
+    window.location.reload()
 }
